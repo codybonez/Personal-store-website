@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Personal_store_website.Data;
 namespace Personal_store_website
 {
     public class Program
@@ -5,6 +8,8 @@ namespace Personal_store_website
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddDbContext<Personal_store_websiteContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("Personal_store_websiteContext") ?? throw new InvalidOperationException("Connection string 'Personal_store_websiteContext' not found.")));
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();

@@ -18,7 +18,8 @@
 
 ( function() {
 
-	function stripHtml( value ) {
+	function strip
+		(value) {
 
 		// Remove html tags and space chars
 		return value.replace( /<.[^<>]*?>/g, " " ).replace( /&nbsp;|&#160;/gi, " " )
