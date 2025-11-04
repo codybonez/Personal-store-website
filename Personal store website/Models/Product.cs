@@ -7,5 +7,7 @@
         public string ProductDescription { get; set; }
         public int Size { get; set; }
         public float Weight { get; set; }
+
+        public int Quantity {  get; set; }
     }
 }
