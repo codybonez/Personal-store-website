@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Personal_store_website.Models.Product>
 
 @{
-    Layout = null;
+    Layout = "_Layout"; 
 }
 
 <!DOCTYPE html>
@@ -13,29 +13,12 @@
 </head>
 <body>
 <p>
-    <a asp-action="Create">Create New</a>
+   
 </p>
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.ProductName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ProductDescription)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ProductWidth)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ProductHeight)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ProductWeight)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ProductInStock)
-            </th>
+         
             <th></th>
         </tr>
     </thead>
@@ -61,9 +44,7 @@
                 @Html.DisplayFor(modelItem => item.ProductInStock)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.ProductId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ProductId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ProductId">Delete</a>
+             
             </td>
         </tr>
 }
